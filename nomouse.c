@@ -57,6 +57,7 @@ main(int argc, char **argv)
       rooty += offy;
     }
     XWarpPointer(disp, None, root, 0, 0, 0, 0, rootx, rooty);
+    XSetInputFocus(disp, PointerRoot, RevertToPointerRoot, CurrentTime);
   } else {
     fprintf(stdout, "%d, %d\n", rootx, rooty);
   }
